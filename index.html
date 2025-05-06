@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+	<title>Zachary Zaczeks Portfolio</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Zaczeks Photography and Exploration is a photography website.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+
+
+	<style>
+		body{
+			background-image: url('mother.png');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			overflow-y: scroll;
+		}
+	</style>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #121212;
+            color: white;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+			font-size: 20px;
+  			margin: auto;
+  			width:50%;
+  			border: 100px;
+  			padding: 10px;
+  			float: none;
+            width: 100%;
+            max-width: 1200px;
+            padding: 2%;
+        }
+        
+        .bio-box {
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 3px solid white;
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-top: 2rem;
+            width: 100%;
+            overflow: hidden;
+        }
+
+		.bio-box2 {
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 3px solid white;
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-top: 2rem;
+            max-width: 800px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+		/* Three image containers (use 25% for four, and 50% for two, etc) */
+		.column {
+		  float: left;
+		  width: 33.33%;
+		  padding: 5px;
+		}
+
+		/* Clear floats after image containers */
+		.row::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+
+		/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+		@media screen and (max-width: 500px) {
+		  .column {
+		    width: 100%;
+		  }
+		}
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 3%;
+            }
+            
+            .bio-box {
+                padding: 1.5rem;
+                font-size: 0.95rem;
+            }
+
+			.bio-box2 {
+                padding: 1.5rem;
+                font-size: 0.95rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 2%;
+            }
+            
+            .bio-box {
+                padding: 1.2rem;
+                font-size: 0.9rem;
+                border-width: 2px;
+            }
+
+			.bio-box2 {
+                padding: 1.2rem;
+                font-size: 0.9rem;
+                border-width: 2px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+	<header>
+
+		<div>
+			<center>
+				<a href="index.html"><img src="C:\Users\zacha\Desktop\ZacharysPortfolio\images\zach.jpeg" alt="ZachPic" class="profile"></a>
+			</center>
+		</div>
+
+		<div class="video">
+			<center>
+			<video width="320" height="100" autoplay muted>
+				<source src="name.mp4" type="video/mp4">
+			</video>
+			</center>
+		</div>
+
+		<div>
+			<div class="header">
+				<div class="header-center">
+				  <a class="active" href="index.html">Home</a>
+				  <a class="inactive" href="about.html">About Me</a>
+				  <a class="inactive" href="education.html">Education</a>
+				  <a class="inactive" href="projects.html">Projects</a>
+				  <a class="inactive" href="contact.html">Contact</a>
+				</div>
+			  </div>
+		</div>
+
+		<div>
+			<div class="container">
+				<div class="bio-box">
+					I am a cybersecurity student with a sharp mind and a creative edge.
+					I thrive at the intersection of curiosity and critical thinking, always looking beyond the obvious to uncover hidden vulnerabilities and smarter solutions. With a solid foundation in cybersecurity principles and a drive to stay ahead of evolving threats, I bring both technical skill and fresh perspective to every challenge I tackle.				</div>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<div class="container">
+				<div class="bio-box2">
+					<div style="text-align:center;">
+						<h1>Connect With Me</h1>
+						<br>
+						<hr>
+						<br>
+						<div class="row">
+							<div class="column">
+								<a href="https://www.linkedin.com/in/zachary-zaczek"><img src="linkedin.png" alt="linkdin-logo" class="logo"></a>
+							</div>
+							<div class="column">
+								<a href="https://app.joinhandshake.com/profiles/n25yp7"><img src="handshake.png" alt="hadnshake-logo" class="logo"></a>
+							</div>
+							<div class="column">
+								<a href="https://github.com/zacharyzaczek"><img src="github.png" alt="github-logo" class="logo"></a>
+							</div>
+						  </div>
+						</div>
+						<br>
+						<hr>
+						<br>
+					</div>	
+				</div>	
+			</div>	
+		</div>
+
+	</header>
+
+	<main>
+	</main>
+
+	<footer>
+
+	</footer>
+
+
+</body>
+</html>

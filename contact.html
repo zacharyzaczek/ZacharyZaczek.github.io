@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+	<title>Zachary Zaczeks Portfolio</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/styles_contact.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Zaczeks Photography and Exploration is a photography website.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+
+
+	<style>
+		body{
+			background-image: url('mother.png');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			overflow-y: scroll;
+		}
+	</style>
+
+    <style>
+        * {
+            margin: auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        .bio-box {
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 3px solid white;
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            margin-top: 2rem;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        header {
+            padding: 0.5rem ;
+        }
+
+        .contact-form {
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            color:white;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: white;
+            color: black;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: grey;
+        }
+        
+        .contact-info {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .email-link {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .email-link:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            color: white;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .contact-form {
+                padding: 1.5rem;
+            }
+		
+			.bio-box {
+				padding: 1.2rem;
+				font-size: 0.9rem;
+				border-width: 2px;
+			}
+		}
+		
+    </style>
+</head>
+
+<body>
+	<header>
+		<div>
+			<center>
+				<a href="index.html"><img src="C:\Users\zacha\Desktop\ZacharysPortfolio\images\zach.jpeg" alt="ZachPic" class="profile"></a>
+			</center>
+		</div>
+
+		<div class="video">
+			<center>
+			<video width="320" height="100" autoplay muted>
+				<source src="connect.mp4" type="video/mp4">
+				
+			  Your browser does not support the video tag.
+			</video>
+			</center>
+		</div>
+		<div>
+			<div class="header">
+				<div class="header-center">
+				  <a class="inactive" href="index.html">Home</a>
+				  <a class="inactive" href="about.html">About Me</a>
+				  <a class="inactive" href="education.html">Education</a>
+				  <a class="inactive" href="projects.html">Projects</a>
+				  <a class="active" href="contact.html">Contact</a>
+				</div>
+			  </div>
+		</div>
+
+		<div class="container">
+        	<div class="contact-form">
+        	    <form id="contactForm">
+                    <div class="bio-box" style="text-align:center;">
+        	            <div class="form-group">
+        	                <label style="color:white;" for="name">Name</label>
+        	                <input type="text" id="name" name="name" required>
+        	            </div>
+                    
+        	            <div class="form-group">
+        	                <label style="color:white;" for="email">Email</label>
+        	                <input type="email" id="email" name="email" required>
+        	            </div>
+                    
+        	            <div class="form-group">
+        	                <label style="color:white;" for="subject">Subject</label>
+        	                <input type="text" id="subject" name="subject" required>
+        	            </div>
+                    
+        	            <div class="form-group">
+        	                <label style="color:white;" for="message">Message</label>
+        	                <textarea id="message" name="message" required></textarea>
+        	            </div>
+                        <div style="text-align:center;">
+        	            <button type="button" class="btn" id="sendBtn">Send Message</button>
+                        </div>
+                    </div>
+        	    </form>
+        	</div>
+		</div>
+	</header>
+        
+    <footer>
+        <script>
+            // Replace with your email address
+            const yourEmail = "Zachary-Zaczek@protonmail.com";
+
+            // Update email display in the contact info section
+            document.getElementById('directEmail').textContent = yourEmail;
+            document.getElementById('directEmail').href = `mailto:${yourEmail}`;
+
+            // Handle form submission
+            document.getElementById('sendBtn').addEventListener('click', function() {
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const subject = document.getElementById('subject').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                // Simple validation
+                if(!name || !email || !subject || !message) {
+                    alert('Please fill in all fields');
+                    return;
+                }
+
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if(!emailRegex.test(email)) {
+                    alert('Please enter a valid email address');
+                    return;
+                }
+
+                // Create email body
+                const emailBody = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+
+                // Create mailto URL
+                const mailtoUrl = `mailto:${yourEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+
+                // Open email client
+                window.location.href = mailtoUrl;
+            });
+        </script>
+    </footer>
+		
+
+
+
+</body>
+</html>

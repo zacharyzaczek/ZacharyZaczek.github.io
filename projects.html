@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+	<title>Zachary Zaczeks Portfolio</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/styles_project.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Zaczeks Photography and Exploration is a photography website.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+
+
+	<style>
+		body{
+			background-image: url('mother.png');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			overflow-y: scroll;
+		}
+	</style>
+
+	<style>
+
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+			flex-wrap: wrap;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		.bio-box {
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 3px solid white;
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            font-size: 1.5rem;
+        }
+
+		.image-wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.image-container {
+			width: 400px;
+			height: 300px;
+			overflow: hidden;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		}
+
+		.image-container img {
+			border-style: solid;
+			border-width: thick;
+			border-color: black;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.3s ease;
+		}
+
+		.image-container img:hover {
+			transform: scale(1.05);
+		}
+
+		.image-caption {
+			margin-top: 10px;
+			font-size: 16px;
+			color: #555;
+		}
+
+		h1 {
+			text-align: center;
+			margin-bottom: 40px;
+			color: #333;
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 500px) {
+			.container {
+				flex-direction: column;
+			}
+
+			.image-container {
+				width: 100%;
+				max-width: 450px;
+			}
+
+            .bio-box {
+				float: none;
+                padding: .2rem;
+                border-width: .02px;
+            }
+        }
+	</style>
+
+	<style>
+		footer {
+            text-align: center;
+            margin-top: 2rem;
+            color: white;
+            font-size: 0.9rem;
+        }
+	</style>
+
+
+</head>
+
+<body>
+
+	<header>
+
+		<div>
+			<center>
+				<a href="index.html"><img src="C:\Users\zacha\Desktop\ZacharysPortfolio\images\zach.jpeg" alt="ZachPic" class="profile"></a>
+			</center>
+		</div>
+
+		<div class="video">
+			<center>
+			<video width="320" height="100" autoplay muted>
+				<source src="observe.mp4" type="video/mp4">
+			</video>
+			</center>
+		</div>
+
+		<div>
+			<div class="header">
+				<div class="header-center">
+				  <a class="inactive" href="index.html">Home</a>
+				  <a class="inactive" href="about.html">About Me</a>
+				  <a class="inactive" href="education.html">Education</a>
+				  <a class="active" href="projects.html">Projects</a>
+				  <a class="inactive" href="contact.html">Contact</a>
+				</div>
+			  </div>
+		</div>
+
+	</header>
+	
+	<br>
+	<br>
+
+	<main>
+
+		<div>
+			<div class="container">
+				<div class ="bio-box">
+						<div class="image-container">
+							<a href="https://github.com/zacharyzaczek/Academic_Projects"><img src="academic.png" alt="First image"></a>
+						</div>
+					</div>
+				<div>
+				<br>
+				<div class="bio-box">
+					<div class="image-wrapper">
+						<div class="image-container">
+							<a href="https://github.com/zacharyzaczek/Personal_Projects"><img src="personal.png" alt="Second image"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+</body>
+</html>
