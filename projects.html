@@ -86,7 +86,33 @@
 			color: #333;
 		}
 
+		/* Projects row */
+		.projects-row {
+			display: flex;
+			justify-content: center;
+			gap: 20px;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+		
+		.project-item {
+			flex: 1;
+			max-width: 450px;
+		}
+
 		/* Responsive adjustments */
+		@media (max-width: 900px) {
+			.projects-row {
+				flex-direction: column;
+				align-items: center;
+			}
+			
+			.project-item {
+				width: 100%;
+				max-width: 450px;
+			}
+		}
+
 		@media (max-width: 500px) {
 			.container {
 				flex-direction: column;
@@ -153,26 +179,23 @@
 	<br>
 
 	<main>
-
-		<div>
-			<div class="container">
-				<div class ="bio-box">
-						<div class="image-container">
-							<a href="https://github.com/zacharyzaczek/Academic_Projects"><img src="images/academic.png" alt="First image"></a>
-						</div>
-					</div>
-				<div>
-				<br>
+		<div class="projects-row">
+			<div class="project-item">
 				<div class="bio-box">
-					<div class="image-wrapper">
-						<div class="image-container">
-							<a href="https://github.com/zacharyzaczek/Personal_Projects"><img src="images/personal.png" alt="Second image"></a>
-						</div>
+					<div class="image-container">
+						<a href="https://github.com/zacharyzaczek/Academic_Projects"><img src="images/academic.png" alt="First image"></a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="project-item">
+				<div class="bio-box">
+					<div class="image-container">
+						<a href="https://github.com/zacharyzaczek/Personal_Projects"><img src="images/personal.png" alt="Second image"></a>
 					</div>
 				</div>
 			</div>
 		</div>
-
 	</main>
 </body>
 </html>
