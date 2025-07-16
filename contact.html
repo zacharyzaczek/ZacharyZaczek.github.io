@@ -141,6 +141,33 @@
 				border-width: 2px;
 			}
 		}
+
+        /* Loading animation for submit button */
+        .btn.loading {
+            position: relative;
+            color: transparent;
+        }
+
+        .btn.loading::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: 50%;
+            left: 50%;
+            margin-left: -8px;
+            margin-top: -8px;
+            border: 2px solid #000000;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
 		
     </style>
 </head>
@@ -176,7 +203,7 @@
 
 		<div class="container">
         	<div class="contact-form">
-        	    <form id="contactForm">
+        	    <form target="_blank" action="https://formsubmit.co/zacharyzaczek@gmail.com" method="POST">
                     <div class="bio-box" style="text-align:center;">
         	            <div class="form-group">
         	                <label style="color:white;" for="name">Name</label>
@@ -198,7 +225,7 @@
         	                <textarea id="message" name="message" required></textarea>
         	            </div>
                         <div style="text-align:center;">
-        	            <button type="button" class="btn" id="sendBtn">Send Message</button>
+        	            <button type="submit" class="btn" id="sendBtn">Send Message</button>
                         </div>
                     </div>
         	    </form>
@@ -208,41 +235,17 @@
         
     <footer>
         <script>
-            // Replace with your email address
-            const yourEmail = "Zachary-Zaczek@protonmail.com";
-
-            // Update email display in the contact info section
-            document.getElementById('directEmail').textContent = yourEmail;
-            document.getElementById('directEmail').href = `mailto:${yourEmail}`;
-
-            // Handle form submission
-            document.getElementById('sendBtn').addEventListener('click', function() {
-                const name = document.getElementById('name').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const subject = document.getElementById('subject').value.trim();
-                const message = document.getElementById('message').value.trim();
-
-                // Simple validation
-                if(!name || !email || !subject || !message) {
-                    alert('Please fill in all fields');
-                    return;
-                }
-
-                // Email validation
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if(!emailRegex.test(email)) {
-                    alert('Please enter a valid email address');
-                    return;
-                }
-
-                // Create email body
-                const emailBody = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-
-                // Create mailto URL
-                const mailtoUrl = `mailto:${yourEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-
-                // Open email client
-                window.location.href = mailtoUrl;
+            // Add loading animation to submit button
+            document.querySelector('form').addEventListener('submit', function(e) {
+                const submitBtn = document.querySelector('.btn');
+                submitBtn.classList.add('loading');
+                submitBtn.disabled = true;
+                
+                // Re-enable button after a delay (in case form doesn't redirect)
+                setTimeout(() => {
+                    submitBtn.classList.remove('loading');
+                    submitBtn.disabled = false;
+                }, 3000);
             });
         </script>
     </footer>
